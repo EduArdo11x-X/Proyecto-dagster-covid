@@ -1,0 +1,39 @@
+[32m2025-08-30 21:10:27 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a88b1dda-2991-4fe2-86c3-920ef340c855 - 95348 - LOGS_CAPTURED - Started capturing logs in process (pid: 95348).
+[32m2025-08-30 21:10:27 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - a88b1dda-2991-4fe2-86c3-920ef340c855 - 95348 - leer_datos - STEP_START - Started execution of step "leer_datos".
+[32m2025-08-30 21:10:27 +0000[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - a88b1dda-2991-4fe2-86c3-920ef340c855 - 95348 - leer_datos - STEP_FAILURE - Execution of step "leer_datos" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "leer_datos"::
+
+requests.exceptions.MissingSchema: Invalid URL '/workspace/proyecto-dagster-covid/covid_data.csv': No scheme supplied. Perhaps you meant https:///workspace/proyecto-dagster-covid/covid_data.csv?
+
+Stack Trace:
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 137, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/ProyectoFinal/src/ProyectoFinal/defs/assets.py", line 23, in leer_datos
+    r = requests.get(LOCAL_CSV)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/requests/models.py", line 438, in prepare_url
+    raise MissingSchema(
+[0m

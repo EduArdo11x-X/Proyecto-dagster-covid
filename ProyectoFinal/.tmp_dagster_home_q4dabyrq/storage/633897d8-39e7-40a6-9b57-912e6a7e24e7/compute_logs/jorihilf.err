@@ -1,0 +1,7 @@
+[32m2025-08-30 21:22:20 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 113968 - LOGS_CAPTURED - Started capturing logs in process (pid: 113968).
+[32m2025-08-30 21:22:20 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 113968 - leer_datos - STEP_START - Started execution of step "leer_datos".
+[32m2025-08-30 21:22:20 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 113968 - leer_datos - STEP_OUTPUT - Yielded output "result" of type "DataFrame". (Type check passed).
+[32m2025-08-30 21:22:20 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - leer_datos - Writing file at: /workspaces/Proyecto-dagster-covid/ProyectoFinal/.tmp_dagster_home_q4dabyrq/storage/leer_datos using PickledObjectFilesystemIOManager...
+[32m2025-08-30 21:22:20 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 113968 - leer_datos - ASSET_MATERIALIZATION - Materialized value leer_datos.
+[32m2025-08-30 21:22:20 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 113968 - leer_datos - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-08-30 21:22:20 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 113968 - leer_datos - STEP_SUCCESS - Finished execution of step "leer_datos" in 327ms.

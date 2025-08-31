@@ -1,0 +1,7 @@
+[32m2025-08-30 20:56:53 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b4cae089-0cb5-48f5-bfdf-682845f76cbe - 75244 - LOGS_CAPTURED - Started capturing logs in process (pid: 75244).
+[32m2025-08-30 20:56:53 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b4cae089-0cb5-48f5-bfdf-682845f76cbe - 75244 - covid_raw - STEP_START - Started execution of step "covid_raw".
+[32m2025-08-30 20:56:57 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b4cae089-0cb5-48f5-bfdf-682845f76cbe - 75244 - covid_raw - STEP_OUTPUT - Yielded output "result" of type "DataFrame". (Type check passed).
+[32m2025-08-30 20:56:57 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b4cae089-0cb5-48f5-bfdf-682845f76cbe - covid_raw - Writing file at: /workspaces/Proyecto-dagster-covid/ProyectoFinal/.tmp_dagster_home_q4dabyrq/storage/covid_raw using PickledObjectFilesystemIOManager...
+[32m2025-08-30 20:56:58 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b4cae089-0cb5-48f5-bfdf-682845f76cbe - 75244 - covid_raw - ASSET_MATERIALIZATION - Materialized value covid_raw.
+[32m2025-08-30 20:56:58 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b4cae089-0cb5-48f5-bfdf-682845f76cbe - 75244 - covid_raw - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2025-08-30 20:56:58 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - b4cae089-0cb5-48f5-bfdf-682845f76cbe - 75244 - covid_raw - STEP_SUCCESS - Finished execution of step "covid_raw" in 4.33s.

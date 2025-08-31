@@ -1,0 +1,29 @@
+[32m2025-08-30 21:22:24 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 114032 - LOGS_CAPTURED - Started capturing logs in process (pid: 114032).
+[32m2025-08-30 21:22:24 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 114032 - datos_procesados - STEP_START - Started execution of step "datos_procesados".
+[32m2025-08-30 21:22:24 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - datos_procesados - Loading file from: /workspaces/Proyecto-dagster-covid/ProyectoFinal/.tmp_dagster_home_q4dabyrq/storage/leer_datos using PickledObjectFilesystemIOManager...
+[32m2025-08-30 21:22:24 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 114032 - datos_procesados - LOADED_INPUT - Loaded input "leer_datos" using input manager "io_manager", from output "result" of step "leer_datos"
+[32m2025-08-30 21:22:24 +0000[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 114032 - datos_procesados - STEP_INPUT - Got input "leer_datos" of type "DataFrame". (Type check passed).
+[32m2025-08-30 21:22:24 +0000[0m - dagster - [34mERROR[0m - [31m__ASSET_JOB - 633897d8-39e7-40a6-9b57-912e6a7e24e7 - 114032 - datos_procesados - STEP_FAILURE - Execution of step "datos_procesados" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "datos_procesados"::
+
+KeyError: ['new_cases', 'people_vaccinated']
+
+Stack Trace:
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+                  ^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 137, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+             ^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+                                                                    ^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/ProyectoFinal/src/ProyectoFinal/defs/assets.py", line 87, in datos_procesados
+    df = df.dropna(subset=["new_cases", "people_vaccinated"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/Proyecto-dagster-covid/.venv/lib/python3.12/site-packages/pandas/core/frame.py", line 6677, in dropna
+    raise KeyError(np.array(subset)[check].tolist())
+[0m

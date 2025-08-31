@@ -1,0 +1,26 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos temporales de Dagster
+.dagster/
+*.tmp_dagster_home_*
+storage/
+outputs/
+
+# Caché
+__pycache__/
+*.pyc
+
+# Archivos grandes
+*.parquet
+*.zip
+*.so
+*.dll
+*.exe
+*.db
+
+# Sistema
+.DS_Store
+Thumbs.db
