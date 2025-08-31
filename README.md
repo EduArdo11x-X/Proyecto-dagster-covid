@@ -7,4 +7,9 @@ para que se vean las fechas solo es necesario de modificar el formato de las cel
 <img width="680" height="564" alt="Captura de Pantalla 2025-08-31 a la(s) 15 55 17" src="https://github.com/user-attachments/assets/65fe1b71-7888-40c3-9f59-e5df936802f6" />
 
 
+Cualquier observacion se incluyo en el reporte tecnico, solo es cuestion de ejecutarlo por mediante de aqui de github en codespaces y posteriormente ejecutarlo, a mi me funciono sin problema alguno:
+
+<img width="1280" height="800" alt="Captura de Pantalla 2025-08-31 a la(s) 15 59 26" src="https://github.com/user-attachments/assets/80e6999b-c766-419f-bb34-c01a27b67720" />
+
+
 Realizado por: Kevin Eduardo Cajeca Idrovo.
